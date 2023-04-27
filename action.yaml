@@ -1,0 +1,23 @@
+name: eweOS Package Checker
+author: Yukari Chiba
+description: Build and check a PKGBUILD package from eweOS
+branding:
+  color: white
+  icon: box
+inputs:
+  pkgdir:
+    description: "Relative path to directory containing the PKGBUILD file."
+    required: false
+    default: "."
+  makepkgArgs:
+    description: "Additional arguments to pass to makepkg."
+    required: false
+    default: ""
+outputs:
+  pkgfile0:
+    description: "Filename of the first generated package archive. Usually only one."
+  pkgfile1:
+    description: "Filename of the 2nd generated package archive, etc."
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
