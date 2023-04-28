@@ -1,4 +1,4 @@
-FROM ghcr.io/eweos/docker:latest
+FROM ghcr.io/eweos/docker:master
 
 COPY entrypoint.sh /entrypoint.sh
 
